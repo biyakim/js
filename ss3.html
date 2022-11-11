@@ -1,0 +1,58 @@
+<script>
+    // function Bank(init = 0) {
+    //     this.balance = init;
+    // }
+    // Bank.prototype.getBalance = function(amount) {
+    //     return this.balance;
+    // }
+    // Bank.prototype.withdraw = function(amount) {
+    //     if (amount >= this.balance) {
+    //         const left = this.balance;
+    //         this.balance = 0;
+    //         return left;
+    //     } else {
+    //         this.balance -= amount;
+    //         return amount;
+    //     }
+    // }
+    // function getSummary(arr) {
+    //     let max = arr[0];
+    //     let min = arr[0];
+    //     let sum = 0;
+
+    //     for (const num of arr) {
+    //         if (num > max) max = num;
+    //         if (num < min) min = num;
+    //         sum += num;
+    //     }
+    //     return {
+    //         max,
+    //         min,
+    //         avg: (sum / arr.length)
+    //     }
+    // }
+    // let summary = getSummary([100, 50, 60]);
+    // console.log(summary);
+
+    let cart = new Cart();
+
+    let item1 = new Cartltem("초고파이", 2000, 10, 0.1);
+    let item2 = new Cartltem("신라면 블랙", 1000, 5, 0.2);
+
+    console.log(item1, getPrice());
+    console.log(item1.getDiscountPrice());
+
+    cart.add(item1);
+    cart.add(item2);
+
+    console.log(cart.getTotalItemCount());
+    console.log(cart.getTotalPrice());
+    console.log(cart.getTotalDiscountPrice());
+    console.log(cart.getDifference());
+
+    cart.empty();
+
+    console.log(cart.getTotalItemCount());
+    console.log(cart.getTotalPrice());
+    console.log(cart.getTotalDiscountPrice());
+</script>

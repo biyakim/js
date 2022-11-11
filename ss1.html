@@ -1,0 +1,65 @@
+<script>
+    function average(arr) {
+        let sum = 0;
+        for (const n of arr) {
+            sum += n;
+
+        }
+        return sum / 3;
+    }
+    let avg = average([100, 50, 25]);
+    console.log(avg);
+
+    // function addMatrix(m1, m2) {
+    //     let result = [];
+    //     for (let i = 0; i < m1.length; i++) {
+    //         let row = [];
+    //         for (let j = 0; j < m1[i].length; j++) {
+    //             row.push(m1[i][j] + m2[i][j]);
+    //         }
+    //         result.push(row);
+    //     }
+    //     return result;
+    // }
+
+    // const m = addMatrix([
+    //     [1, 2],
+    //     [3, 4]
+    // ], [
+    //     [3, 4],
+    //     [5, 6]
+    // ])
+    // console.log(m);
+
+    // function swapKeyValue(obj) {
+    //     let o = {};
+    //     for (const key in obj) {
+    //         const value = obj[key];
+    //         o[value] = key;
+    //     }
+    //     return o;
+    // }
+
+    // const o = {
+    //     a: "B",
+    //     c: "D"
+    // };
+    // const o2 = swapKeyValue(o);
+    // console.log(o2);
+
+
+    // function ch(arr1, arr2) {
+    //     let result = [];
+    //     for (let i = 0; i < arr.length; i += size) {
+    //         result.push(arr.slice(i, i + size));
+    //     }
+    //     return result;
+    // }
+
+
+    // const r1 = chunk([1, 2, 3, 4, 5], 2);
+    // console.log(r1);
+
+    // const r2 = chunk([1, 2, 3, 4, 5, ], 3);
+    // console.log(r2);
+</script>

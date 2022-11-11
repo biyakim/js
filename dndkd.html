@@ -1,0 +1,41 @@
+<body>
+	<div>
+		<input id="option_tet" type="text"/>
+		<button id="add_option">추가</button>
+	</div>
+	<div id="select-holder">
+	</div>
+</body>
+<script type="text/javascript">
+	function makeSelect(food) {
+		let select = document.createElement("select");
+		for (let i of food){
+				let option = document.createElement("option");
+				option.setAttribute("value", i);
+				option.textContent = i;
+				select.append(option);
+		}
+
+		return select;
+	}
+
+
+
+	let options = ["apple","banana","grape"];
+	let s = makeSelect(options);
+
+	document.getElementById("select-holder").append(s);
+
+	function addOptionToSelect(s, text){
+		let option = document.createElement("option")
+		option.setAttribute("value",text)
+		option.textContent = text;
+		s.append(option);
+	}
+
+	let onClick = document.getElementById("add_option");
+	onClick.onclick = () => {
+		let option = document.getElementById("option_tet").value;
+		addOptionToSelect(s,option);
+	}
+</script>

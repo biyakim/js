@@ -1,0 +1,49 @@
+<script>
+    function sumAll(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    let result = sumAll([1, 2, 3]);
+    console.log(result);
+
+
+    function getDiscountPrice(p) {
+        return p.price - (p.price * p.rate);
+    }
+    let product = {
+        name: '라면',
+        price: 1000,
+        rate: 0.2
+    }
+    let discountPrice = getDiscountPrice(product);
+    console.log(discountPrice);
+
+    let p1 = {
+        x: 0,
+        y: 3
+    };
+
+    function move(point, dx, dy) {
+        return {
+            x: point.x + dx,
+            y: point.y + dy
+        }
+    }
+    let p2 = move(p1, 2, 3);
+    console.log(p2);
+
+    function nameSplit(n) {
+        let arr = n.split(" ");
+        let arr1 = {
+            fist: arr[0],
+            last: arr[1]
+        };
+        return arr1;
+    }
+    let name = "John Smith";
+    let s = nameSplit(name);
+    console.log(s);
+</script>

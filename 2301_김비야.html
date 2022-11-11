@@ -1,0 +1,33 @@
+<script>
+    /*2301_김비야*/
+
+    function last(arr) {
+        let a = arr[arr.length - 1];
+        if (a === undefined) return null;
+        return a;
+    }
+
+    function nth(arr, idx) {
+        let e = arr[idx];
+        if (e === undefined) return null;
+        return e;
+    }
+
+    function reverse(arr) {
+        let result = [];
+        for (let i = arr.length - 1; i > 0; i--) {
+            //result.push(arr[i]);
+            result[j] = arr[i];
+            j++;
+        }
+        return result;
+    }
+
+    function short(str) {
+        if (str.length >= 10) {
+            return str[0] + (str.length - 2) + str[str.length - 1];
+        } else {
+            return str;
+        }
+    }
+</script>

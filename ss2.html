@@ -1,0 +1,95 @@
+<script>
+    let dog = {
+        name: "Puppy",
+        age: 5,
+        gender: "female"
+    }
+    console.log(dog)
+
+    let dog2 = new Object();
+    dog2.name = "Puppy";
+    dog2.age = 5;
+    dog2.gender = "female";
+
+
+    let price1 = {
+        name: "라면",
+        price: 1000,
+        discountRate: 0.2
+    };
+    console.log(price1)
+
+    const school = {
+        name: "미림여자정보과학고"
+    };
+    school.studentCount = 304;
+    school["principal"] = "이형원";
+    school.address = "서울시 관악구 신림로";
+
+    delete school.studentCount;
+    console.log(school)
+
+    school["hello-world"] = 1234;
+    school["my prop"] = "value";
+
+    let type = "Galaxy";
+    const manufacturer = "Samsung";
+    let color = "red";
+
+    let phone = {
+        type,
+        manufacturer,
+        color
+    };
+
+    function changeUser(u, prop, value, changeOriginal) {
+        if (changeOriginal) {
+            u[prop] = value;
+            return u;
+        } else {
+            let copy = Object.assign({}, u);
+            copy[prop] = value;
+            return copy;
+        }
+    }
+
+    let user = {
+        name: "John",
+        age: 20
+    };
+    let u1 = changeUser(user, "name", "Sam", true);
+    let u2 = changeUser(user, "name", "Sam", false);
+    let u3 = changeUser(user, "age", 30, false);
+    console.log(user === u1);
+    console.log(user === u2);
+    console.log(u3);
+
+
+    function query(obj) {
+        const props = [];
+        for (const key in obj) props.push(key);
+        //2.속성 이름을 배열에 저장하고 전부 ","로 합지려면? 
+        const s = props.join(",");
+        while (true) {
+            //3. 배열에 해당 이름이 포함되어 있는지 검사하는 로직 작성은 어떻게 => 이건 그냥 짜도 될듯?
+            const input = prompt(s + " 중 속성 입력");
+            if (props.includes(input.trim())) {
+                alert(obj[input]);
+                break;
+            }
+        }
+
+    }
+    let user2 = {
+        name: "John",
+        age: 20
+    };
+    query(user2);
+
+    let phone2 = {
+        price: 100000,
+        model: "iPhone",
+        manu: "Apple"
+    };
+    query(phone2);
+</script>
